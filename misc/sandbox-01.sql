@@ -1,0 +1,1 @@
+SELECT PaymentDate FROM Invoices;SELECT PaymentDate,		COALESCE(PaymentDate, '1900-01-01') AS NewDate   FROM Invoices;SELECT PaymentDate,		ISNULL(PaymentDate, '1900-01-01') AS NewDate   FROM Invoices;SELECT STRING_AGG(TermsDueDays, ', ') AS ConcatenatedStringFROM Terms;
